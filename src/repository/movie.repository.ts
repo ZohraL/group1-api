@@ -6,7 +6,7 @@ class MovieRepositoryService {
     /**
      * GET::REQUEST
      */
-    getMovies(limit: number = 10, offset: number = 0): Promise<Array<Movie>> {
+    getMovies(): Promise<Array<Movie>> {
         const queryString = `SELECT id, nom, type, annee, realisateur FROM MOVIE` // LIMIT ${limit} OFFSET ${offset}, limit = limite le nbre de colonne de ma requete et offset c'est le pt de départ de la requete
 
         return new Promise((resolve, reject) => {
