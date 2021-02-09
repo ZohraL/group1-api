@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS `movies_test`;
 
-CREATE TABLE `movies_test` (
+CREATE TABLE `MOVIE` (
   `id` int  PRIMARY KEY  NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
@@ -9,9 +9,9 @@ CREATE TABLE `movies_test` (
   `annee` int DEFAULT NULL
 );
 
-LOCK TABLES `movies_test` WRITE;
+LOCK TABLES `MOVIE` WRITE;
 
-INSERT INTO `movies_test` (`nom`, `type`, `realisateur`, `annee`)
+INSERT INTO `MOVIE` (`nom`, `type`, `realisateur`, `annee`)
 VALUES
 	("souviens toi de l'été dernier", 'horreur', 'labobo', 1995),
 	("retour vers le futur", 'fantaisie', 'labobo', 1995),
