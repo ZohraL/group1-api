@@ -9,13 +9,13 @@ CREATE TABLE `movies_test` (
   `annee` int DEFAULT NULL
 )
 
-LOCK TABLES `movies_test` WRITE;
+USE `movies_test`;
 
 INSERT INTO `users` (`id`, `nom`, `type`, `realisateur`, `annee`)
 VALUES
 	("souviens toi de l'été dernier", 'horreur', 'labobo', 1995),
 	("retour vers le futur", 'fantaisie', 'labobo', 1995),
     ("titanic", 'drame', 'zozette la chouette', 1991),
-    ("zozette et bobi au ski", 'comedie', 'maxichoupi', 1867),
+    ("zozette et bobi au ski", 'comedie', 'maxichoupi', 1867);
 
 UNLOCK TABLES;
