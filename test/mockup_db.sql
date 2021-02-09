@@ -11,7 +11,7 @@ CREATE TABLE `movies_test` (
 
 LOCK TABLES `movies_test` WRITE;
 
-INSERT INTO `movies_test` (`id`, `nom`, `type`, `realisateur`, `annee`)
+INSERT INTO `movies_test` (`nom`, `type`, `realisateur`, `annee`)
 VALUES
 	("souviens toi de l'été dernier", 'horreur', 'labobo', 1995),
 	("retour vers le futur", 'fantaisie', 'labobo', 1995),
