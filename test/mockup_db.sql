@@ -9,7 +9,7 @@ CREATE TABLE `movies_test` (
   `annee` int DEFAULT NULL
 )
 
-USE `movies_test`;
+LOCK TABLES `movies_test` WRITE;
 
 INSERT INTO `users` (`id`, `nom`, `type`, `realisateur`, `annee`)
 VALUES
