@@ -14,9 +14,9 @@ LOCK TABLES `movies_test` WRITE;
 
 INSERT INTO `users` (`id`, `nom`, `type`, `realisateur`, `annee`)
 VALUES
-	(1,"souvient toi de l'été dernier", 'horreur', 'labobo', "1995"),
-	(2,"retour vers le futur", 'fantaisie', 'labobo', "1995"),
-    (3,"titanic", 'drame', 'zozette la chouette', "1991"),
-    (4,"zozette et bobi au ski", 'comedie', 'maxichoupi', "1867"),
+	(1,"souvient toi de l'été dernier", 'horreur', 'labobo', 1995),
+	(2,"retour vers le futur", 'fantaisie', 'labobo', 1995),
+    (3,"titanic", 'drame', 'zozette la chouette', 1991),
+    (4,"zozette et bobi au ski", 'comedie', 'maxichoupi', 1867),
 
 UNLOCK TABLES;
