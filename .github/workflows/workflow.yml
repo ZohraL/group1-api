@@ -22,22 +22,15 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
       - uses: mmeisels/action-send-an-email-@v1
-     
-  
+        env:
+          SENDGRID_API_KEY: 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
         with:
+          node-version: '15'
           emailToAddress: 'alexandrebobichon@gmail.com'
           emailFromAddress: 'laid.zohra@gmail.com'
           emailBody: 'email body text - can be html also'
-    
-        env:
-          SENDGRID_API_KEY: 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
-
-        with:
-          node-version: '15'
       - name: Populate MySQL database
         run: bash pre-test.sh
         # $GITHUB_WORKSPACE
       - run: npm install
       - run: npm test
-
-    
