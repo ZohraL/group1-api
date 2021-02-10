@@ -1,4 +1,4 @@
-import { DB } from "../service"
+// import { DB } from "../service"
 import { Movie } from "../model/Movie"
 
 class MovieRepositoryService {
@@ -11,12 +11,12 @@ class MovieRepositoryService {
 
         return new Promise((resolve, reject) => {
 
-            DB.query(queryString)
-                .then((results: Array<any>) => {
-                    resolve(results.map(row => new Movie(row)))
-                }).catch(e => {
-                    reject(e)
-                })
+            // DB.query(queryString)
+            //     .then((results: Array<any>) => {
+            //         resolve(results.map(row => new Movie(row)))
+            //     }).catch(e => {
+            //         reject(e)
+            //     })
 
         })
     }

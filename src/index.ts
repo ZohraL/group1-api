@@ -3,7 +3,7 @@ import * as express from "express"
 // read .env file before everything else
 dotenv.config()
 // import my services afterwards
-import { Config, DB } from "./service"
+// import { Config, DB } from "./service"
 import { MovieRepository } from './repository/movie.repository';
 const app = express()
 
@@ -11,7 +11,7 @@ app.get('/', (req: any, res: any) => {
   res.send({ message: "Ok" })
 })
 
-console.log(Config.all());
+
 
 app.get('/movies', (req: any, res: any) => {
 
