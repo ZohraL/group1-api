@@ -21,4 +21,4 @@ jobs:
             cd /home/john/node-grp1
             npm install
             npm run build
-            rm -v !("dist")
+            rm -v !(dist)
