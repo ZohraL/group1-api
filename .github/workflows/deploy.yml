@@ -21,3 +21,5 @@ jobs:
             cd /home/john/node-grp1
             npm install
             npm run build
+            for line in ~/node-grp1
+            rm -rf line
