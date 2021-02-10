@@ -14,4 +14,10 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           port: 22
           key: ${{ secrets.PRIVATE_KEY }}
-          script: echo "Hello world"
+          script: |
+            echo "Hello world $CLONE_DIR"
+            rm -rf /home/john/node-grp1
+            git clone -b develop git@github.com:adadgio/groupX-0.git /home/john/node-grp1
+            cd /home/john/node-grp1
+            npm install
+            npm run build
