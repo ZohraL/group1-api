@@ -17,7 +17,7 @@ jobs:
           script: |
             echo "Hello world $CLONE_DIR"
             rm -rf /home/john/node-grp1
-            git clone -b develop git@github.com:adadgio/groupX-0.git /home/john/node-grp1
+            git clone -b develop git@github.com:ZohraL/group1-api.git /home/john/node-grp1
             cd /home/john/node-grp1
             npm install
             npm run build
