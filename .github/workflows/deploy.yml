@@ -17,6 +17,15 @@ jobs:
           script: |
             echo "Hello world $CLONE_DIR"
             rm -rf /home/john/node-grp1
-
+            git clone -b develop git@github.com:ZohraL/group1-api.git /home/john/node-grp1
+            cd /home/john/node-grp1
+            npm install
+            npm run build
+            mv /home/john/node-grp1/.env.beta /home/john/node-grp1/dist
+            sed -i 's/my_port/${{ secrets.SSH_PORT }}/g' /home/john/node-grp1/dist/.env.beta
+            shopt -s extglob
+            rm -rf !(dist)
+            cd dist
+            npm install
 
           
