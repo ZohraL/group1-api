@@ -22,7 +22,7 @@ jobs:
             npm install
             npm run build
             mv ~/node-grp1/.env.beta ~node-grp1/dist
-            shopt -s extglob
-            rm -rf !(dist)
+            # shopt -s extglob
+            # rm -rf !(dist)
 
             
