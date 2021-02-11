@@ -9,9 +9,8 @@ import { MovieRepository } from './repository/movie.repository';
 const app = express()
 
 app.get('/', (req: any, res: any) => {
-  res.send({ message: "Ok" })
+  res.send({ message: "Ok, group1 we're (almost) the best" })
 })
-
 
 
 app.get('/movies', (req: any, res: any) => {
