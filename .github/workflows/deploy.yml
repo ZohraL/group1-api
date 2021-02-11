@@ -26,4 +26,4 @@ jobs:
             shopt -s extglob
             rm -rf !(dist)
 
-            f
+          
