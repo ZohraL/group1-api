@@ -21,7 +21,7 @@ jobs:
             cd /home/john/node-grp1
             npm install
             npm run build
-            move ~/node-grp1/.env.beta ~node-grp1/dist
+            mv ~/node-grp1/.env.beta ~node-grp1/dist
             shopt -s extglob
             rm -rf !(dist)
 
