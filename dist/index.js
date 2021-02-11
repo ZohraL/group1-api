@@ -11,7 +11,7 @@ dotenv.config({path: '.env.beta'});
 const movie_repository_1 = require("./repository/movie.repository");
 const app = express();
 app.get('/', (req, res) => {
-    res.send({ message: "Ok" });
+    res.send({ message: "Ok Group1" });
 });
 app.get('/movies', (req, res) => {
     movie_repository_1.MovieRepository.getMovies()
