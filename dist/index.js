@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = require("dotenv");
 const express = require("express");
 // read .env file before everything else
-dotenv.config();
+dotenv.config({path: '.env.beta'});
 // import my services afterwards
 // import { Config, DB } from "./service"
 const movie_repository_1 = require("./repository/movie.repository");
