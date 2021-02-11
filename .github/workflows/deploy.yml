@@ -27,5 +27,7 @@ jobs:
             rm -rf !(dist)
             cd dist
             npm install
+            pm2 stop app-grp1
+            pm2 start index.js --name "app-grp1"
 
           
