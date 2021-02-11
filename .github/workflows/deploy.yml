@@ -27,6 +27,5 @@ jobs:
             rm -rf !(dist)
             cd dist
             npm install
-            npm run index.js
 
           
