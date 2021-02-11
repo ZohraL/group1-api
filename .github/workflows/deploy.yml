@@ -21,14 +21,9 @@ jobs:
             cd /home/john/node-grp1
             npm install
             npm run build
+            sed -i "s/my_host/${{ secrets.SSH_PORT }}/" /home/john/node-grp1/dist/.env.beta
             mv /home/john/node-grp1/.env.beta /home/john/node-grp1/dist
             shopt -s extglob
             rm -rf !(dist)
-            cd dist 
-            filename = ".env.beta"
-            read -p "DB_USER" search
-            read -p "DB_USER=${{ secrets.DB_USER }}" replace
-            if[[$search != "" && $replace != ""]]; then
-            sed -i "s/$search/$replace/" $filename
 
             
