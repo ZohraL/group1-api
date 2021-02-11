@@ -1,7 +1,8 @@
 import * as dotenv from "dotenv"
 import * as express from "express"
 // read .env file before everything else
-dotenv.config()
+console.log(__dirname + "/.env.beta")
+dotenv.config({path: __dirname + "/.env.beta" })
 // import my services afterwards
 // import { Config, DB } from "./service"
 import { MovieRepository } from './repository/movie.repository';
