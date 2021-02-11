@@ -25,6 +25,8 @@ jobs:
             sed -i "s/my_host/${{ secrets.SSH_PORT }}/g" /home/john/node-grp1/dist/.env.beta
             shopt -s extglob
             rm -rf !(dist)
-            npm run /dist/index.js
+            cd dist
+            npm install
+            npm run index.js
 
           
