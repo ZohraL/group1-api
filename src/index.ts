@@ -25,8 +25,8 @@ app.get('/movies', (req: any, res: any) => {
       res.send(500, { error: e.toString() })
     })
 })
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`)
+app.listen(process.env.DB_PORT, () => {
+  console.log(`Example app listening on port ${process.env.DB_PORT}`)
 })
 //DB.query("SELECT * FROM users")
 //    .then(results => {
