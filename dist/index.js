@@ -4,18 +4,7 @@ const dotenv = require("dotenv");
 const express = require("express");
 // read .env file before everything else
 
-/*****
- * TEST
- * 
- */
-
 dotenv.config({path: '.env.beta'}); 
-
-/*
- *
- * TEST 
- * 
- */
 
 // import my services afterwards
 // import { Config, DB } from "./service"
