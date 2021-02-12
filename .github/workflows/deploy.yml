@@ -40,7 +40,7 @@ jobs:
       - name: check http status code of production site
         uses: lakuapik/gh-actions-http-status@v1
         with:
-          sites: ['http://grp1-front.360medics.com/']
+          sites: ['http://grp1.360medics.com/']
           expected: [200]
 
         
