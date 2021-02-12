@@ -2,12 +2,15 @@ import * as dotenv from "dotenv"
 import * as express from "express"
 // read .env file before everything else
 console.log(__dirname + "/.env.beta")
-dotenv.config({path: __dirname + "/.env.beta" })
+dotenv.config({ path: __dirname + "/.env.beta" })
 // import my services afterwards
 // import { Config, DB } from "./service"
-import { MovieRepository } from './repository/movie.repository';
-const app = express()
+import { MovieRepository } from './repository/movie.repository'
+import * as cors from 'cors';
 
+
+const app = express()
+app.use(cors());
 app.get('/', (req: any, res: any) => {
   res.send({ message: "Ok, group1 we're (almost) the best" })
 })
