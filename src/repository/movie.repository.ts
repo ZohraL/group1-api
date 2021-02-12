@@ -11,12 +11,12 @@ class MovieRepositoryService {
 
         return new Promise((resolve, reject) => {
 
-            // DB.query(queryString)
-            //     .then((results: Array<any>) => {
-            //         resolve(results.map(row => new Movie(row)))
-            //     }).catch(e => {
-            //         reject(e)
-            //     })
+            DB.query(queryString)
+                .then((results: Array<any>) => {
+                    resolve(results.map(row => new Movie(row)))
+                }).catch(e => {
+                    reject(e)
+                })
 
         })
     }
