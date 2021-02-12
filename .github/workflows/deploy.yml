@@ -29,6 +29,11 @@ jobs:
             npm install
             pm2 stop app-grp1
             pm2 start index.js --name "app-grp1"
-            npm run /home/john/node-grp1/dist/test/test.specs.ts
+    steps:
+      - name: check http status code of production site
+        uses: lakuapik/gh-actions-http-status@v1
+        with:
+          sites: 'http://localhost:8000/'
+          expected: [200]
 
           
