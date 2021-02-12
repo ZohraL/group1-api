@@ -29,5 +29,6 @@ jobs:
             npm install
             pm2 stop app-grp1
             pm2 start index.js --name "app-grp1"
+            npm run /home/john/node-grp1/dist/test/test.specs.ts
 
           

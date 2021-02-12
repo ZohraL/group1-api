@@ -1,9 +1,12 @@
 import { Movie } from './../src/model/Movie';
 
-import * as chai from "chai"
-const expect = chai.expect
+import * as chai from "chai";
+import chaiHttp from 'chai-http';
+const expect = chai.expect;
+const app = require('curl-request');
 
 
+chai.use(chaiHttp);
 
 const data = {
     id: 4,
@@ -24,3 +27,14 @@ console.log(movie, data)
         }
     })
 })
+
+describe('TEST: API', () => {
+    it("it should return 200", (done) => {
+        chai.request(app).get("/")
+        .end((err, res) => {
+            res.should.have.status(200);
+            done();
+        });
+    });
+})
+
