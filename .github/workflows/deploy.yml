@@ -41,6 +41,6 @@ jobs:
         uses: lakuapik/gh-actions-http-status@v1
         with:
           sites: '["http://grp1.360medics.com/"]'
-          expected: [200]
+          expected: '[200]'
 
         
