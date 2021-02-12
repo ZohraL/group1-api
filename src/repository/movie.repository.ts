@@ -1,4 +1,4 @@
-// import { DB } from "../service"
+import { DB } from "../service"
 import { Movie } from "../model/Movie"
 
 class MovieRepositoryService {
