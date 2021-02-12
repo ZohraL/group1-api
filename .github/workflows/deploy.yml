@@ -33,8 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [deploy]
     steps:
-      - name: Sleep for 3 sec
-        uses: jakejarvis/wait-actions@master
+      - name: Sleep for 3 secs (si pm2 mets du temps à démarrer)
+        uses: jakejarvis/wait-action@master
         with:
           time: '3s'
       - name: check http status code of production site
