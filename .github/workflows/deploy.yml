@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Executing remote ssh 2 commands using password
         uses: appleboy/ssh-action@master
+        uses: lakuapik/gh-actions-http-status@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -29,9 +30,6 @@ jobs:
             npm install
             pm2 stop app-grp1
             pm2 start index.js --name "app-grp1"
-      - name: check http status code of production site
-        uses: lakuapik/gh-actions-http-status@v1
-        with:
           sites: 'http://localhost:8000/'
           expected: [200]
 
